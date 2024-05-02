@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<title>Document</title>  
+<script> function checkvalue()  
+{  
+var a = document.getElementById('no').value; if(a  
+<= 1)  
+{  
+alert("Please give prime number"); return  
+false;  
+}  
+for(var i=2;i<=Math.sqrt(a);i++)  
+{ if(a%i===0)  
+{  
+alert("Please give prime number"); return false;  
+}  
+}  
+var b = document.getElementById('pr').value; for  
+(var i = 2; i < a-1; i++)  
+{  
+if (Math.pow(b, i) % a === 1)  
+{  
+alert("Please enter correct primitive root"); return false;  
+}  
+}  
+var XA = parseInt(document.getElementById('xa').value); var  
+XB = parseInt(document.getElementById('xb').value); var n =  
+Math.pow(b, XA); var YA = n % a; alert("YA is " + YA); var n1 = Math.pow(b, XB); 
+var YB = n1 % a; alert("YB is " + YB); var n3=Math.pow(YB,XA); var k1=n3 % a; 
+alert("K1 is " + k1); var n4=Math.pow(YA,XB); var k2=n4 % a; alert("K2 is " + 
+k2); if(k1==k2)  
+{ alert("K1 == k2");  
+alert("Key is Successfully Exchange");  
+} return 
+true;  
+}  
+</script>  
+</head>  
+<body>  
+<form onsubmit="return checkvalue()">  
+<center>  
+<h1>Diffie Hellman key Exchange</h1> Enter the Prime no:  
+<input type="text" name="no" id="no">  
+<br><br>  
+Enter Primitive root:  
+<input type="text" name="pr" id="pr"> <br><br>  
+Select XA:  
+<input type="text" name="xa" id="xa"> 
+<br><br>  
+Select XB:  
+<input type="text" name="xb" id="xb"> 
+<br><br>  
+<input type="submit" value="Check all the values"> 
+</center>  
+</form> </body>  
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diffie-Hellman Key Exchange</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="alice-column">
+            <h2>Alice</h2>
+            <div class="key-input">
+                <label for="alicePrivateKey">Enter Alice's Private Key:</label>
+                <input type="number" id="alicePrivateKey">
+            </div>
+            <div class="public-key">
+                <label for="alicePublicKey">Alice's Public Key:</label>
+                <span id="alicePublicKey">---</span>
+            </div>
+            <div class="message-box">
+                <textarea id="aliceMessage" placeholder="Type a message..."></textarea>
+                <button onclick="sendMessage('alice')">Send</button>
+            </div>
+            <div id="aliceChat" class="chat"></div>
+        </div>
+        <div class="bob-column">
+            <h2>Bob</h2>
+            <div class="key-input">
+                <label for="bobPrivateKey">Enter Bob's Private Key:</label>
+                <input type="number" id="bobPrivateKey">
+            </div>
+            <div class="public-key">
+                <label for="bobPublicKey">Bob's Public Key:</label>
+                <span id="bobPublicKey">---</span>
+            </div>
+            <div class="message-box">
+                <textarea id="bobMessage" placeholder="Type a message..."></textarea>
+                <button onclick="sendMessage('bob')">Send</button>
+            </div>
+            <div id="bobChat" class="chat"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
