@@ -116,3 +116,20 @@ public class RestaurantChatbot {
 // Bot: You're welcome! Enjoy your meal.
 // You: Bye
 // Bot: Goodbye! Have a great day.
+
+
+
+
+/*
+The program defines a RestaurantChatbot class with the main method to run the chatbot.
+It initializes a map called responses that maps different user inputs to corresponding bot responses.
+The main method prompts the user with a welcome message and starts a loop to continuously interact with the user until the user enters an empty message (indicating they want to exit).
+Inside the loop, the program takes user input and adds it to a list called chatHistory.
+The getBotResponse method processes the user input and generates an appropriate response from the bot. It determines the time of day (morning, afternoon, or evening) based on the current time.
+The bot response is determined based on the user input. For example, if the user says "hello" or "hi," the bot responds with a greeting appropriate for the time of day.
+If the user asks about the menu, hours, location, or thanks the bot responds accordingly with predefined responses from the responses map.
+If the user input doesn't match any predefined responses, the bot tries to match it with keywords from the responses map and provides an appropriate response if found.
+The displayChatHistory method is used to display the conversation history stored in the chatHistory list.
+The randomResponse method selects a random response from an array of options for a given key.
+
+*/

@@ -228,3 +228,37 @@ class AStar {
 // 0 3 7
 // 4 2 5
 // 6 8 1
+
+
+
+/*
+
+
+This Java program implements the A* algorithm to solve the N*N - 1 puzzle problem. Here's a breakdown of how the program works:
+
+Node Class: Defines a nested static class Node, which represents a state of the puzzle. Each node contains:
+parent1: A reference to the parent node.
+m: A 2D array representing the puzzle state.
+x1, y1: Coordinates of the blank tile.
+cost1: Number of misplaced tiles.
+level1: Number of moves made so far.
+Utility Methods:
+printMatrix(int m[][]: Prints a 2D array representing the puzzle.
+newNode(): Allocates a new node with the given parameters.
+calculateCost(): Calculates the number of misplaced tiles between initial and final states.
+isSafe(): Checks if given coordinates are within bounds of the puzzle matrix.
+printPath(): Prints the path from the root node to the destination node.
+Comparator Class: Defines a nested static class comp, which implements the Comparator interface to compare nodes based on their cost and level.
+Solve Method: Implements the A* algorithm to solve the puzzle:
+Creates a priority queue pq1 to store live nodes of the search tree.
+Initializes the root node with the initial state and its cost.
+Adds the root node to the priority queue.
+Iterates until the priority queue is empty:
+Removes the node with the lowest cost from the priority queue.
+If the node represents the goal state, prints the path and exits.
+Generates child nodes for all possible moves from the current node and adds them to the priority queue.
+Main Method: Initializes the initial and final states of the puzzle and calls the solve() method to find the solution.
+Overall, the program efficiently searches for the optimal solution to the NN - 1 puzzle problem using the A algorithm by exploring the state space in a systematic manner.
+
+
+*/

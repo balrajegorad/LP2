@@ -123,3 +123,30 @@ public class ColumnarTranspositionCipher {
 // Encrypted Message: SANHV_RA_
 // Decrypted Message: SANHVRA
 // PS C:\My Files\Final programs AI IS - Copy> 
+
+
+
+
+/*
+
+This Java program implements the Columnar Transposition Cipher encryption and decryption technique. Here's how the code works:
+
+The program prompts the user to enter a message and a key for encryption.
+It then converts the input message to uppercase to standardize the text.
+The key is also converted to uppercase for consistency.
+The program sets up a permutation order based on the key. Each character in the key is assigned a unique index in a LinkedHashMap.
+Encryption:
+The program calculates the number of rows and columns needed to form a matrix based on the length of the message and the key.
+It initializes a matrix with the calculated dimensions and fills it with characters from the message, padding with '_' if necessary.
+The matrix is then transposed to perform the columnar transposition.
+Characters from the transposed matrix are appended to form the encrypted message according to the permutation order specified by the key.
+Decryption:
+The encrypted message is decrypted by reversing the encryption process.
+The program calculates the number of rows and columns needed for the cipher matrix based on the length of the encrypted message and the key.
+It fills the cipher matrix with characters from the encrypted message.
+The decryption process involves reconstructing the original message from the cipher matrix using the permutation order specified by the key.
+Characters from the decrypted matrix are appended to form the decrypted message.
+The program then prints the encrypted and decrypted messages.
+In summary, this code demonstrates the encryption and decryption process of the Columnar Transposition Cipher using a simple algorithm based on matrix manipulation and permutation.
+
+*/

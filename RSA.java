@@ -37,8 +37,41 @@ public class RSA {
         // String message = "Hello, RSA!";
         System.out.println("Original message: " + message);
         byte[] encrypted = rsa.encrypt(message.getBytes());
-        System.out.println("Encrypted message: " + new String(encrypted));
+        System.out.println("Encrypte message: " + new String(encrypted));
         byte[] decrypted = rsa.decrypt(encrypted);
         System.out.println("Decrypted message: " + new String(decrypted));
     }
 }
+
+
+/*
+
+enter string
+balu
+Original message: balu
+Encrypte message: D/?h4?d~??|??
+?♦e*?dI7?K?*??↔|▬??f??B???#T=????m??t7Q?aDY?U▲??X???&???V??
+(????♦▼???$^I?5?
+Decrypted message: balu
+PS C:\Desktop\Final programs AI IS - Copy> 
+
+/*
+
+
+/*
+
+
+This Java program implements the RSA (Rivest-Shamir-Adleman) encryption algorithm, which is a widely used cryptographic algorithm for secure communication over an insecure channel. Here's a simple explanation of how the code works:
+
+The RSA class defines a constructor to generate public and private keys based on a given bit length. It uses two large prime numbers p and q to calculate the modulus n (product of p and q) and the totient phi of n.
+The publicKey is set to a common value (65537), which is a typical choice for the public key exponent in RSA.
+The privateKey is calculated as the modular inverse of the publicKey modulo phi.
+The encrypt method takes a byte array representing the message to be encrypted. It converts the byte array to a BigInteger, raises it to the power of the publicKey modulo modulus, and returns the result as a byte array.
+The decrypt method takes a byte array representing the encrypted message. It converts the byte array to a BigInteger, raises it to the power of the privateKey modulo modulus, and returns the result as a byte array.
+In the main method, the user is prompted to enter a string message.
+An instance of the RSA class is created with a bit length of 1024.
+The original message is encrypted using the encrypt method, and the encrypted message is printed.
+The encrypted message is decrypted using the decrypt method, and the decrypted message is printed.
+Overall, this code demonstrates how RSA encryption and decryption work using public and private keys. It showcases the process of encrypting a message with the public key and decrypting it with the corresponding private key to recover the original message.
+
+*/

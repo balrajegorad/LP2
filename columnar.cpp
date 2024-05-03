@@ -171,5 +171,34 @@ int main()
 // |O E   |
 // Encrypted Message: V ESMOPC 
 // Decrypted Message: SVPM COE
-// PS C:\My Files\IS and AI Practicals> 
+// PS C:\My Files\IS and AI Practicals>
 
+/*
+
+
+This C++ program implements the Columnar Transposition Cipher encryption and decryption technique. Here's how the code works:
+
+The program prompts the user to enter a message and a key for encryption.
+It reads the input message and the key from the standard input.
+The setPermutationOrder() function sets up a permutation order based on the key. It creates a map where the characters of the key are mapped to their respective positions in the key string.
+Encryption:
+The encryptMessage() function calculates the number of rows and columns needed to form a matrix based on the length of the message and the key.
+It initializes a 2D character array (matrix) with the calculated dimensions and fills it with characters from the message, padding with '_' if necessary.
+The transposition matrix is displayed.
+Characters are extracted from the transposed matrix according to the permutation order specified by the key, and appended to form the encrypted message.
+Decryption:
+The decryptMessage() function calculates the number of rows and columns needed for the cipher matrix based on the length of the encrypted message and the key.
+It fills the cipher matrix with characters from the encrypted message.
+The decryption process involves rearranging the characters of the cipher matrix to reconstruct the original message according to the permutation order specified by the key.
+Characters from the decrypted matrix are appended to form the decrypted message.
+The program then prints the encrypted and decrypted messages.
+In summary, this code demonstrates the encryption and decryption process of the Columnar Transposition Cipher using a simple algorithm based on matrix manipulation and permutation.
+
+
+
+
+
+
+
+
+*/
